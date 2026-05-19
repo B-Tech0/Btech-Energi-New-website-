@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Btech Energi — Solar Energy Solutions</title>
+<title>Btech Energy Ltd — Reliable Solar Energy Solutions in Nigeria</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -41,24 +41,26 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 5vw;
-    height: 72px;
+    height: 80px;
     background: rgba(5,13,26,0.92);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
   }
   .logo {
-    display: flex; align-items: center; gap: 10px;
-    font-family: var(--font-head); font-size: 22px; font-weight: 800;
-    color: var(--text); text-decoration: none; letter-spacing: -0.5px;
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
   }
-  .logo-icon {
-    width: 36px; height: 36px;
-    background: linear-gradient(135deg, var(--accent), var(--blue-light));
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 18px;
+  .logo img {
+    height: 50px;
+    width: auto;
   }
-  .logo span { color: var(--accent); }
+  .logo-text {
+    font-family: var(--font-head); font-size: 20px; font-weight: 800;
+    color: var(--text); letter-spacing: -0.5px;
+    line-height: 1;
+  }
+  .logo-text span { color: var(--accent); display: block; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
+  
   .nav-links {
     display: flex; gap: 2rem; list-style: none;
   }
@@ -71,11 +73,12 @@
   .nav-links a:hover { color: var(--accent); }
   .nav-cta {
     background: var(--accent); color: var(--navy) !important;
-    padding: 8px 20px; border-radius: 6px;
+    padding: 10px 24px; border-radius: 6px;
     font-weight: 600 !important;
-    transition: opacity 0.2s !important;
+    transition: all 0.2s !important;
+    text-decoration: none;
   }
-  .nav-cta:hover { opacity: 0.85; color: var(--navy) !important; }
+  .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
   .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; }
 
@@ -87,8 +90,8 @@
     margin-bottom: 16px;
   }
   h1, h2, h3 { font-family: var(--font-head); }
-  h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; }
-  h3 { font-size: 1.2rem; font-weight: 700; }
+  h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 24px; }
+  h3 { font-size: 1.4rem; font-weight: 700; }
   .text-accent { color: var(--accent); }
   .text-muted { color: var(--text-muted); }
 
@@ -102,18 +105,11 @@
   }
   .hero-bg {
     position: absolute; inset: 0; z-index: 0;
-    background:
-      radial-gradient(ellipse 80% 60% at 70% 40%, rgba(21,101,192,0.18) 0%, transparent 70%),
-      radial-gradient(ellipse 50% 40% at 20% 80%, rgba(0,229,255,0.07) 0%, transparent 60%);
+    background: 
+      linear-gradient(rgba(5, 13, 26, 0.7), rgba(5, 13, 26, 0.7)),
+      url('assets/hero-solar.jpg') center/cover no-repeat;
   }
-  .hero-grid {
-    position: absolute; inset: 0; z-index: 0;
-    background-image:
-      linear-gradient(rgba(100,160,255,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(100,160,255,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-  .hero-content { position: relative; z-index: 1; max-width: 800px; }
+  .hero-content { position: relative; z-index: 1; max-width: 850px; }
   .hero-badge {
     display: inline-flex; align-items: center; gap: 8px;
     background: rgba(0,229,255,0.08); border: 1px solid rgba(0,229,255,0.2);
@@ -123,70 +119,42 @@
   .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
   .hero-title {
-    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-size: clamp(2.8rem, 7vw, 5rem);
     font-weight: 800; line-height: 1.0; letter-spacing: -0.04em;
     margin-bottom: 28px;
   }
   .hero-title em { font-style: normal; color: var(--accent); }
   .hero-sub {
-    font-size: 1.15rem; color: var(--text-muted); max-width: 560px;
+    font-size: 1.2rem; color: var(--text-muted); max-width: 600px;
     line-height: 1.7; margin-bottom: 44px;
   }
   .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
   .btn-primary {
     background: var(--accent); color: var(--navy);
-    padding: 14px 32px; border-radius: 8px;
-    font-family: var(--font-head); font-weight: 700; font-size: 15px;
+    padding: 16px 36px; border-radius: 8px;
+    font-family: var(--font-head); font-weight: 700; font-size: 16px;
     text-decoration: none; transition: all 0.2s;
     border: none; cursor: pointer;
   }
-  .btn-primary:hover { background: #33eeff; transform: translateY(-2px); }
+  .btn-primary:hover { background: #33eeff; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0, 229, 255, 0.2); }
   .btn-outline {
     background: transparent; color: var(--text);
-    padding: 14px 32px; border-radius: 8px; border: 1px solid var(--border-bright);
-    font-family: var(--font-head); font-weight: 600; font-size: 15px;
+    padding: 16px 36px; border-radius: 8px; border: 1px solid var(--border-bright);
+    font-family: var(--font-head); font-weight: 600; font-size: 16px;
     text-decoration: none; transition: all 0.2s; cursor: pointer;
   }
-  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-  .hero-stats {
-    display: flex; gap: 48px; margin-top: 64px;
-    padding-top: 40px; border-top: 1px solid var(--border);
-  }
-  .stat-val { font-family: var(--font-head); font-size: 2.2rem; font-weight: 800; color: var(--text); }
-  .stat-val span { color: var(--accent); }
-  .stat-label { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); background: rgba(0, 229, 255, 0.05); }
 
   /* ── ABOUT ── */
   #about { background: var(--navy-2); }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
   .about-visual {
-    position: relative; aspect-ratio: 1;
-    max-width: 480px;
-  }
-  .sun-ring {
-    width: 100%; height: 100%;
-    border-radius: 50%;
-    border: 1px solid var(--border-bright);
-    display: flex; align-items: center; justify-content: center;
     position: relative;
-    animation: spin-slow 30s linear infinite;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
   }
-  @keyframes spin-slow { to { transform: rotate(360deg); } }
-  .sun-core {
-    width: 55%; height: 55%;
-    background: radial-gradient(circle, #1e88e5, #0d47a1);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 4rem; animation: spin-slow 30s linear infinite reverse;
-  }
-  .orbit-dot {
-    position: absolute; width: 14px; height: 14px;
-    background: var(--accent); border-radius: 50%;
-  }
-  .orbit-dot:nth-child(2) { top: -7px; left: calc(50% - 7px); }
-  .orbit-dot:nth-child(3) { bottom: -7px; left: calc(50% - 7px); }
-  .orbit-dot:nth-child(4) { left: -7px; top: calc(50% - 7px); background: var(--gold); }
-  .orbit-dot:nth-child(5) { right: -7px; top: calc(50% - 7px); background: var(--gold); }
+  .about-visual img { width: 100%; height: auto; display: block; }
   .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
   .feat-pill {
     display: flex; align-items: center; gap: 10px;
@@ -194,7 +162,7 @@
     border-radius: 10px; padding: 12px 16px;
     font-size: 14px; font-weight: 500;
   }
-  .feat-icon { font-size: 20px; }
+  .feat-icon { color: var(--accent); font-weight: bold; }
 
   /* ── SERVICES ── */
   #services { background: var(--navy); }
@@ -202,7 +170,7 @@
   .service-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
-    border-radius: 16px; padding: 32px;
+    border-radius: 16px; padding: 40px;
     transition: all 0.3s; position: relative; overflow: hidden;
   }
   .service-card::before {
@@ -210,672 +178,252 @@
     background: linear-gradient(90deg, var(--accent), var(--blue-light));
     transform: scaleX(0); transition: transform 0.3s; transform-origin: left;
   }
-  .service-card:hover { border-color: var(--border-bright); transform: translateY(-4px); }
+  .service-card:hover { border-color: var(--border-bright); transform: translateY(-8px); background: var(--navy-3); }
   .service-card:hover::before { transform: scaleX(1); }
   .service-icon {
-    width: 52px; height: 52px;
+    width: 60px; height: 60px;
     background: rgba(0,229,255,0.08); border: 1px solid rgba(0,229,255,0.15);
-    border-radius: 12px;
+    border-radius: 14px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 26px; margin-bottom: 20px;
+    font-size: 28px; margin-bottom: 24px;
   }
-  .service-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
-  .service-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
-
-  /* ── NEWS ── */
-  #news { background: var(--navy-2); }
-  .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
-  .news-card {
-    background: var(--card-bg); border: 1px solid var(--border);
-    border-radius: 16px; overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s;
-    cursor: pointer;
-  }
-  .news-card:hover { border-color: var(--border-bright); transform: translateY(-4px); }
-  .news-thumb {
-    width: 100%; aspect-ratio: 16/9;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 3rem;
-  }
-  .news-thumb.t1 { background: linear-gradient(135deg, #0a2a50, #1565c0); }
-  .news-thumb.t2 { background: linear-gradient(135deg, #003a2e, #00695c); }
-  .news-thumb.t3 { background: linear-gradient(135deg, #1a0050, #4527a0); }
-  .news-body { padding: 20px 24px; }
-  .news-tag {
-    font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
-  }
-  .news-card h3 { font-size: 1rem; line-height: 1.4; margin-bottom: 10px; }
-  .news-meta { font-size: 12px; color: var(--text-dim); }
+  .service-card h3 { margin-bottom: 16px; }
+  .service-card p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
 
   /* ── PROJECTS ── */
-  #projects { background: var(--navy); }
-  .projects-grid { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: auto auto; gap: 20px; margin-top: 56px; }
+  #projects { background: var(--navy-2); }
+  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 56px; }
   .project-card {
     background: var(--card-bg); border: 1px solid var(--border);
-    border-radius: 16px; padding: 36px;
-    transition: border-color 0.3s;
+    border-radius: 20px; overflow: hidden;
+    transition: all 0.3s;
   }
-  .project-card:hover { border-color: var(--border-bright); }
-  .project-card.featured { grid-row: span 2; }
+  .project-card:hover { border-color: var(--accent); transform: scale(1.02); }
+  .project-img { width: 100%; height: 250px; object-fit: cover; }
+  .project-info { padding: 30px; }
   .project-tag {
     display: inline-block;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
     text-transform: uppercase;
     background: rgba(0,229,255,0.1); color: var(--accent);
-    border-radius: 4px; padding: 3px 10px; margin-bottom: 16px;
-  }
-  .project-card h3 { font-size: 1.3rem; margin-bottom: 10px; }
-  .project-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
-  .project-meta {
-    display: flex; gap: 24px; margin-top: 24px;
-    padding-top: 20px; border-top: 1px solid var(--border);
-  }
-  .meta-item label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; }
-  .meta-item p { font-size: 14px; font-weight: 500; margin-top: 2px; }
-  .project-visual {
-    font-size: 5rem; text-align: center;
-    margin-bottom: 24px; padding: 24px;
-    background: rgba(21,101,192,0.08);
-    border-radius: 12px;
-  }
-
-  /* ── SHOP ── */
-  #shop { background: var(--navy-2); }
-  .shop-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 56px; }
-  .shop-card {
-    background: var(--card-bg); border: 1px solid var(--border);
-    border-radius: 16px; overflow: hidden;
-    transition: all 0.3s; cursor: pointer;
-  }
-  .shop-card:hover { border-color: var(--border-bright); transform: translateY(-4px); }
-  .shop-thumb {
-    width: 100%; aspect-ratio: 1;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 4rem;
-    background: linear-gradient(135deg, var(--navy-3), var(--navy-2));
-    border-bottom: 1px solid var(--border);
-  }
-  .shop-body { padding: 16px 20px; }
-  .shop-card h3 { font-size: 0.95rem; margin-bottom: 6px; }
-  .shop-card .price {
-    font-family: var(--font-head); font-size: 1.2rem; font-weight: 700;
-    color: var(--accent); margin-bottom: 14px;
-  }
-  .shop-card .price small { font-size: 0.7rem; color: var(--text-muted); font-family: var(--font-body); font-weight: 400; }
-  .btn-cart {
-    width: 100%; padding: 10px;
-    background: rgba(0,229,255,0.08); border: 1px solid rgba(0,229,255,0.2);
-    color: var(--accent); border-radius: 8px; font-size: 14px; font-weight: 600;
-    cursor: pointer; transition: all 0.2s; font-family: var(--font-body);
-  }
-  .btn-cart:hover { background: var(--accent); color: var(--navy); }
-  .badge-new {
-    display: inline-block; font-size: 10px; font-weight: 700;
-    background: var(--accent); color: var(--navy);
-    border-radius: 4px; padding: 2px 7px; margin-bottom: 4px;
-    letter-spacing: 0.08em;
+    border-radius: 4px; padding: 4px 12px; margin-bottom: 16px;
   }
 
   /* ── CONTACT ── */
   #contact { background: var(--navy-3); }
   .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .contact-info { }
-  .contact-info p { color: var(--text-muted); font-size: 1rem; margin-bottom: 36px; }
   .contact-detail {
-    display: flex; align-items: center; gap: 16px; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 20px; margin-bottom: 24px;
   }
   .contact-icon {
-    width: 44px; height: 44px; border-radius: 10px;
+    width: 50px; height: 50px; border-radius: 12px;
     background: rgba(0,229,255,0.08); border: 1px solid rgba(0,229,255,0.15);
-    display: flex; align-items: center; justify-content: center; font-size: 20px;
+    display: flex; align-items: center; justify-content: center; font-size: 22px;
     flex-shrink: 0;
   }
+  .contact-detail strong { display: block; font-size: 16px; color: var(--text); margin-bottom: 2px; }
   .contact-detail span { font-size: 14px; color: var(--text-muted); }
-  .contact-detail strong { display: block; font-size: 15px; color: var(--text); }
-  .contact-form { display: flex; flex-direction: column; gap: 16px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .form-field { display: flex; flex-direction: column; gap: 6px; }
-  .form-field label { font-size: 13px; color: var(--text-muted); font-weight: 500; }
-  .form-field input, .form-field textarea, .form-field select {
-    background: rgba(10,22,40,0.8); border: 1px solid var(--border-bright);
-    border-radius: 8px; padding: 12px 16px;
+  
+  .form-field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+  .form-field label { font-size: 14px; color: var(--text-muted); font-weight: 500; }
+  .form-field input, .form-field textarea {
+    background: rgba(5, 13, 26, 0.6); border: 1px solid var(--border-bright);
+    border-radius: 10px; padding: 14px 18px;
     color: var(--text); font-family: var(--font-body); font-size: 15px;
     outline: none; transition: border-color 0.2s;
-    resize: none;
   }
-  .form-field input:focus, .form-field textarea:focus, .form-field select:focus {
-    border-color: var(--accent);
-  }
-  .form-field input::placeholder, .form-field textarea::placeholder { color: var(--text-dim); }
-  .form-field select option { background: var(--navy-2); }
+  .form-field input:focus, .form-field textarea:focus { border-color: var(--accent); }
   .form-submit {
-    margin-top: 8px;
     background: var(--accent); color: var(--navy);
-    padding: 14px; border-radius: 8px; border: none;
-    font-family: var(--font-head); font-size: 15px; font-weight: 700;
-    cursor: pointer; transition: all 0.2s;
-    letter-spacing: 0.02em;
+    padding: 16px; border-radius: 10px; border: none;
+    font-family: var(--font-head); font-size: 16px; font-weight: 700;
+    cursor: pointer; transition: all 0.2s; width: 100%;
   }
-  .form-submit:hover { background: #33eeff; }
+  .form-submit:hover { background: #33eeff; transform: translateY(-2px); }
 
   /* ── FOOTER ── */
   footer {
-    background: var(--navy); border-top: 1px solid var(--border);
-    padding: 48px 5vw 32px;
-  }
-  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
-  .footer-brand p { font-size: 14px; color: var(--text-muted); margin-top: 12px; max-width: 280px; line-height: 1.6; }
-  .footer-col h4 {
-    font-family: var(--font-head); font-size: 14px; font-weight: 700;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--text); margin-bottom: 16px;
-  }
-  .footer-col ul { list-style: none; }
-  .footer-col li { margin-bottom: 10px; }
-  .footer-col a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
-  .footer-col a:hover { color: var(--accent); }
-  .footer-bottom {
-    display: flex; justify-content: space-between; align-items: center;
-    border-top: 1px solid var(--border); padding-top: 24px;
-    font-size: 13px; color: var(--text-dim);
-  }
-  .social-links { display: flex; gap: 12px; }
-  .social-link {
-    width: 36px; height: 36px; border-radius: 8px;
-    border: 1px solid var(--border-bright);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px; text-decoration: none; color: var(--text-muted);
-    transition: all 0.2s;
-  }
-  .social-link:hover { border-color: var(--accent); color: var(--accent); }
-
-  /* ── MODAL ── */
-  .modal-overlay {
-    display: none; position: fixed; inset: 0; z-index: 200;
-    background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
-    align-items: center; justify-content: center;
-  }
-  .modal-overlay.active { display: flex; }
-  .modal {
-    background: var(--navy-2); border: 1px solid var(--border-bright);
-    border-radius: 20px; padding: 40px; max-width: 460px; width: 90%;
+    padding: 60px 5vw 30px;
+    background: var(--navy);
+    border-top: 1px solid var(--border);
     text-align: center;
   }
-  .modal-icon { font-size: 3rem; margin-bottom: 16px; }
-  .modal h3 { font-family: var(--font-head); font-size: 1.4rem; margin-bottom: 10px; }
-  .modal p { color: var(--text-muted); font-size: 15px; margin-bottom: 28px; }
-  .modal-close {
-    background: var(--accent); color: var(--navy);
-    border: none; padding: 12px 32px; border-radius: 8px;
-    font-family: var(--font-head); font-weight: 700; font-size: 15px;
-    cursor: pointer;
-  }
+  .footer-logo { margin-bottom: 30px; justify-content: center; }
+  .footer-links { display: flex; gap: 30px; justify-content: center; list-style: none; margin-bottom: 40px; }
+  .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--accent); }
+  .copyright { font-size: 13px; color: var(--text-dim); border-top: 1px solid var(--border); padding-top: 30px; }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    .nav-links { display: none; }
-    .nav-links.open {
-      display: flex; flex-direction: column;
-      position: absolute; top: 72px; left: 0; right: 0;
-      background: var(--navy-2); padding: 20px 5vw;
-      border-bottom: 1px solid var(--border); gap: 12px;
-    }
-    .hamburger { display: flex; }
-    .about-grid, .contact-wrap { grid-template-columns: 1fr; }
-    .services-grid, .news-grid { grid-template-columns: 1fr 1fr; }
-    .shop-grid { grid-template-columns: 1fr 1fr; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .project-card.featured { grid-row: span 1; }
-    .hero-stats { gap: 24px; }
-    .about-features { grid-template-columns: 1fr; }
-    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+  @media (max-width: 992px) {
+    .about-grid, .contact-wrap { grid-template-columns: 1fr; gap: 50px; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .hero-title { font-size: 3.5rem; }
   }
-  @media (max-width: 600px) {
-    section { padding: 70px 5vw; }
-    .services-grid, .news-grid, .shop-grid { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .footer-top { grid-template-columns: 1fr; }
-    .hero-title { font-size: 2.5rem; }
-    .hero-stats { flex-direction: column; gap: 20px; }
+  @media (max-width: 768px) {
+    .services-grid, .projects-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hero-title { font-size: 2.8rem; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#home" class="logo">
-    <div class="logo-icon">☀️</div>
-    Btech <span>Energi</span>
-  </a>
-  <ul class="nav-links" id="navlinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#shop">Shop</a></li>
-    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
-  </ul>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
+  <nav>
+    <a href="#home" class="logo">
+      <img src="assets/logo.png" alt="Btech Energy Logo">
+      <div class="logo-text">BTECH ENERGY<span>...think power</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
+  </nav>
 
-<!-- HERO -->
-<section id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Nigeria's Leading Solar Energy Provider</div>
-    <h1 class="hero-title">
-      Power Your World<br>With <em>Solar Energy</em>
-    </h1>
-    <p class="hero-sub">Btech Energi delivers cutting-edge solar solutions for homes, businesses, and industries across Nigeria — clean, reliable, and built for the future.</p>
-    <div class="hero-ctas">
-      <a href="#services" class="btn-primary">Explore Services</a>
-      <a href="#contact" class="btn-outline">Get a Free Quote</a>
-    </div>
-    <div class="hero-stats">
-      <div>
-        <div class="stat-val">500<span>+</span></div>
-        <div class="stat-label">Projects Completed</div>
-      </div>
-      <div>
-        <div class="stat-val">12<span>MW</span></div>
-        <div class="stat-label">Total Power Installed</div>
-      </div>
-      <div>
-        <div class="stat-val">10<span>yr</span></div>
-        <div class="stat-label">Warranty on Panels</div>
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Trusted Solar Energy Partner in Nigeria</div>
+      <h1 class="hero-title">Switch to <em>Clean</em>, Reliable Energy Today.</h1>
+      <p class="hero-sub">Btech Energy Ltd provides high-quality solar solutions for homes and businesses. We solve Nigeria's power challenges with technical precision and genuine care.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Start Your Journey</a>
+        <a href="#services" class="btn-outline">Our Solutions</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-grid">
-    <div>
-      <div class="section-label">About Btech Energi</div>
-      <h2>Pioneering Clean Energy <span class="text-accent">Across Nigeria</span></h2>
-      <p style="color:var(--text-muted); margin-top:20px; font-size:1.05rem;">
-        Founded with a mission to accelerate Nigeria's renewable energy transition, Btech Energi has been at the forefront of solar technology since our inception. We design, install, and maintain solar energy systems that are built to last.
-      </p>
-      <p style="color:var(--text-muted); margin-top:16px;">
-        From residential rooftop panels to large-scale commercial installations, our team of certified engineers delivers turnkey solutions tailored to your energy needs. We believe in sustainable growth — for our clients and for the planet.
-      </p>
-      <div class="about-features">
-        <div class="feat-pill"><span class="feat-icon">⚡</span> Fast Installation</div>
-        <div class="feat-pill"><span class="feat-icon">🔒</span> 10-yr Warranty</div>
-        <div class="feat-pill"><span class="feat-icon">🌱</span> Eco-Certified</div>
-        <div class="feat-pill"><span class="feat-icon">📊</span> Smart Monitoring</div>
-        <div class="feat-pill"><span class="feat-icon">🛠️</span> 24/7 Support</div>
-        <div class="feat-pill"><span class="feat-icon">💳</span> Flexible Payment</div>
-      </div>
-    </div>
-    <div style="display:flex; justify-content:center;">
+  <section id="about">
+    <div class="about-grid">
       <div class="about-visual">
-        <div class="sun-ring">
-          <div class="orbit-dot"></div>
-          <div class="orbit-dot"></div>
-          <div class="orbit-dot"></div>
-          <div class="orbit-dot"></div>
-          <div class="sun-core">☀️</div>
+        <img src="assets/solar-diagram.jpg" alt="Solar Energy System Diagram">
+      </div>
+      <div class="about-info">
+        <div class="section-label">About Btech Energy</div>
+        <h2>Solving Nigeria's Power Challenges Since 2018</h2>
+        <p>Btech Energy Ltd is a leading solar energy company based in Nigeria, committed to delivering reliable, clean, and cost-effective power solutions. We manage every stage of your energy journey—from consultation to professional installation and maintenance.</p>
+        <div class="about-features">
+          <div class="feat-pill"><span class="feat-icon">✓</span> 10+ Years Experience</div>
+          <div class="feat-pill"><span class="feat-icon">✓</span> Expert Technicians</div>
+          <div class="feat-pill"><span class="feat-icon">✓</span> 24/7 Support</div>
+          <div class="feat-pill"><span class="feat-icon">✓</span> Quality Guaranteed</div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="section-label">What We Do</div>
-  <h2>Comprehensive <span class="text-accent">Solar Services</span></h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">🏠</div>
-      <h3>Residential Solar</h3>
-      <p>Complete home solar solutions including panel installation, inverter setup, and battery storage for uninterrupted power — even during outages.</p>
+  <section id="services">
+    <div class="section-label" style="text-align: center;">Our Expertise</div>
+    <h2 style="text-align: center;">Premium Solar Solutions</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Solar Installation</h3>
+        <p>Professional installation of solar panels, inverters, and battery systems tailored to your specific energy needs.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛠️</div>
+        <h3>Maintenance & Repairs</h3>
+        <p>Keep your system running at peak performance with our scheduled maintenance and prompt repair services.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎓</div>
+        <h3>Training Services</h3>
+        <p>Hands-on solar energy training for individuals and organizations looking to build real-world technical skills.</p>
+      </div>
     </div>
-    <div class="service-card">
-      <div class="service-icon">🏢</div>
-      <h3>Commercial Installations</h3>
-      <p>Scalable solar systems for offices, warehouses, factories, and retail spaces. Reduce operational costs and achieve energy independence.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">⚡</div>
-      <h3>Solar Inverter Systems</h3>
-      <p>Supply and installation of hybrid, off-grid, and grid-tied inverter systems from premium global brands tailored to your load requirements.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔋</div>
-      <h3>Battery Storage</h3>
-      <p>Advanced lithium and gel battery storage solutions that store excess solar energy for night-time use and backup power security.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">📡</div>
-      <h3>Solar Monitoring</h3>
-      <p>Real-time monitoring platforms to track your system's performance, energy output, and savings — accessible from your phone anywhere.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔧</div>
-      <h3>Maintenance & Repair</h3>
-      <p>Scheduled maintenance plans and rapid-response repair services to keep your solar system running at peak efficiency year-round.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- NEWS -->
-<section id="news">
-  <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
-    <div>
-      <div class="section-label">Latest Updates</div>
-      <h2>News &amp; <span class="text-accent">Insights</span></h2>
-    </div>
-    <a href="#news" class="btn-outline" style="padding:10px 22px; font-size:14px;">View All</a>
-  </div>
-  <div class="news-grid">
-    <div class="news-card" onclick="openModal('📰', 'Btech Energi Wins 2025 Renewable Energy Award', 'This article is coming soon. Stay tuned for the full story.')">
-      <div class="news-thumb t1">🏆</div>
-      <div class="news-body">
-        <div class="news-tag">Company News</div>
-        <h3>Btech Energi Wins 2025 Renewable Energy Excellence Award</h3>
-        <div class="news-meta">May 12, 2025 · 3 min read</div>
+  <section id="projects">
+    <div class="section-label" style="text-align: center;">Our Work</div>
+    <h2 style="text-align: center;">Recent Installations</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="assets/inverter-system.jpg" alt="Residential Solar Installation" class="project-img">
+        <div class="project-info">
+          <div class="project-tag">Residential</div>
+          <h3>Hybrid Solar System</h3>
+          <p>Complete off-grid installation for a 5-bedroom residence in Ibadan, Oyo State.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/commercial-solar.jpg" alt="Commercial Solar Installation" class="project-img">
+        <div class="project-info">
+          <div class="project-tag">Commercial</div>
+          <h3>Corporate Power Solution</h3>
+          <p>Large-scale solar array for a commercial office complex, reducing energy costs by 70%.</p>
+        </div>
       </div>
     </div>
-    <div class="news-card" onclick="openModal('🌍', 'Nigeria Solar Potential', 'This article is coming soon. Stay tuned for the full story.')">
-      <div class="news-thumb t2">🌍</div>
-      <div class="news-body">
-        <div class="news-tag">Industry</div>
-        <h3>How Nigeria Is Becoming West Africa's Solar Energy Hub</h3>
-        <div class="news-meta">April 28, 2025 · 5 min read</div>
-      </div>
-    </div>
-    <div class="news-card" onclick="openModal('💡', 'Net Metering Guide', 'This article is coming soon. Stay tuned for the full story.')">
-      <div class="news-thumb t3">💡</div>
-      <div class="news-body">
-        <div class="news-tag">Guide</div>
-        <h3>Understanding Net Metering: Save More From Your Solar System</h3>
-        <div class="news-meta">April 10, 2025 · 4 min read</div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-label">Our Work</div>
-  <h2>Featured <span class="text-accent">Projects</span></h2>
-  <div class="projects-grid">
-    <div class="project-card featured">
-      <div class="project-visual">🏭</div>
-      <div class="project-tag">Industrial</div>
-      <h3>Ikeja Manufacturing Complex — 2.4 MW Solar Plant</h3>
-      <p>End-to-end design and installation of a 2.4 megawatt rooftop solar plant for a major manufacturing facility in Lagos State. The system offsets 100% of daytime energy demand and delivers annual savings of over ₦180 million.</p>
-      <div class="project-meta">
-        <div class="meta-item">
-          <label>Location</label>
-          <p>Ikeja, Lagos</p>
+  <section id="contact">
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <div class="section-label">Contact Us</div>
+        <h2>Let's Power Your Future</h2>
+        <p>Ready to make the switch? Reach out to our experts for a free consultation and quote.</p>
+        
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div>
+            <strong>Head Office</strong>
+            <span>1435D, Secretariat Road, Bodija, Ibadan</span>
+          </div>
         </div>
-        <div class="meta-item">
-          <label>Capacity</label>
-          <p>2.4 MW</p>
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div>
+            <strong>Phone</strong>
+            <span>+234 913 816 8839 | +234 703 257 2590</span>
+          </div>
         </div>
-        <div class="meta-item">
-          <label>Completed</label>
-          <p>March 2025</p>
-        </div>
-      </div>
-    </div>
-    <div class="project-card">
-      <div class="project-tag">Commercial</div>
-      <h3>Abuja Office Park — 500 kW</h3>
-      <p>Grid-tied solar system for a 12-building office park, providing clean energy to over 800 daily occupants.</p>
-      <div class="project-meta">
-        <div class="meta-item"><label>Capacity</label><p>500 kW</p></div>
-        <div class="meta-item"><label>Year</label><p>2024</p></div>
-      </div>
-    </div>
-    <div class="project-card">
-      <div class="project-tag">Rural Electrification</div>
-      <h3>Kano Community Mini-Grid — 120 kW</h3>
-      <p>Off-grid solar mini-grid powering 400 homes and small businesses in a rural community.</p>
-      <div class="project-meta">
-        <div class="meta-item"><label>Capacity</label><p>120 kW</p></div>
-        <div class="meta-item"><label>Year</label><p>2024</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SHOP -->
-<section id="shop">
-  <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
-    <div>
-      <div class="section-label">Solar Store</div>
-      <h2>Shop <span class="text-accent">Products</span></h2>
-    </div>
-    <a href="#shop" class="btn-outline" style="padding:10px 22px; font-size:14px;">View All Products</a>
-  </div>
-  <div class="shop-grid">
-    <div class="shop-card">
-      <div class="shop-thumb">🔆</div>
-      <div class="shop-body">
-        <span class="badge-new">NEW</span>
-        <h3>Monocrystalline Panel 400W</h3>
-        <div class="price">₦185,000 <small>/ panel</small></div>
-        <button class="btn-cart" onclick="addToCart('Monocrystalline Panel 400W')">Add to Cart</button>
-      </div>
-    </div>
-    <div class="shop-card">
-      <div class="shop-thumb">⚡</div>
-      <div class="shop-body">
-        <h3>5kVA Hybrid Inverter</h3>
-        <div class="price">₦420,000</div>
-        <button class="btn-cart" onclick="addToCart('5kVA Hybrid Inverter')">Add to Cart</button>
-      </div>
-    </div>
-    <div class="shop-card">
-      <div class="shop-thumb">🔋</div>
-      <div class="shop-body">
-        <span class="badge-new">HOT</span>
-        <h3>200Ah Lithium Battery</h3>
-        <div class="price">₦375,000</div>
-        <button class="btn-cart" onclick="addToCart('200Ah Lithium Battery')">Add to Cart</button>
-      </div>
-    </div>
-    <div class="shop-card">
-      <div class="shop-thumb">📊</div>
-      <div class="shop-body">
-        <h3>Smart Solar Controller MPPT</h3>
-        <div class="price">₦65,000</div>
-        <button class="btn-cart" onclick="addToCart('Smart Solar Controller MPPT')">Add to Cart</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-wrap">
-    <div class="contact-info">
-      <div class="section-label">Get In Touch</div>
-      <h2>Let's Power Your <span class="text-accent">Future</span></h2>
-      <p>Ready to switch to solar? Our team of experts is available to provide a free consultation and custom quote for your project.</p>
-      <div class="contact-detail">
-        <div class="contact-icon">📍</div>
-        <div>
-          <span>Our Office</span>
-          <strong>14 Energy Close, Victoria Island, Lagos, Nigeria</strong>
+        <div class="contact-detail">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <span>info@btech.com.ng</span>
+          </div>
         </div>
       </div>
-      <div class="contact-detail">
-        <div class="contact-icon">📞</div>
-        <div>
-          <span>Phone</span>
-          <strong>+234 801 234 5678</strong>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon">✉️</div>
-        <div>
-          <span>Email</span>
-          <strong>hello@btechenergy.ng</strong>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon">🕐</div>
-        <div>
-          <span>Hours</span>
-          <strong>Mon – Fri: 8am – 6pm · Sat: 9am – 2pm</strong>
-        </div>
-      </div>
-    </div>
-    <form class="contact-form" onsubmit="submitForm(event)">
-      <div class="form-row">
+      
+      <form class="contact-form">
         <div class="form-field">
-          <label>First Name</label>
-          <input type="text" placeholder="Emeka" required />
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your name">
         </div>
         <div class="form-field">
-          <label>Last Name</label>
-          <input type="text" placeholder="Okafor" required />
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter your email">
         </div>
-      </div>
-      <div class="form-field">
-        <label>Email Address</label>
-        <input type="email" placeholder="emeka@example.com" required />
-      </div>
-      <div class="form-field">
-        <label>Phone Number</label>
-        <input type="tel" placeholder="+234 800 000 0000" />
-      </div>
-      <div class="form-field">
-        <label>Service Interest</label>
-        <select>
-          <option value="">Select a service...</option>
-          <option>Residential Solar Installation</option>
-          <option>Commercial Solar Installation</option>
-          <option>Solar Inverter System</option>
-          <option>Battery Storage</option>
-          <option>Maintenance & Repair</option>
-          <option>Solar Monitoring</option>
-        </select>
-      </div>
-      <div class="form-field">
-        <label>Message</label>
-        <textarea rows="4" placeholder="Tell us about your energy needs..."></textarea>
-      </div>
-      <button type="submit" class="form-submit">Send Message →</button>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="#home" class="logo" style="font-size:20px;">
-        <div class="logo-icon" style="width:32px;height:32px;font-size:16px;">☀️</div>
-        Btech <span>Energi</span>
-      </a>
-      <p>Nigeria's premier solar energy company — delivering clean, reliable, and affordable power solutions since 2015.</p>
+        <div class="form-field">
+          <label>Message</label>
+          <textarea rows="5" placeholder="How can we help you?"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
     </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Careers</a></li>
-      </ul>
+  </section>
+
+  <footer>
+    <div class="logo footer-logo">
+      <img src="assets/logo.png" alt="Btech Energy Logo">
+      <div class="logo-text">BTECH ENERGY<span>...think power</span></div>
     </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#services">Residential Solar</a></li>
-        <li><a href="#services">Commercial Solar</a></li>
-        <li><a href="#services">Battery Storage</a></li>
-        <li><a href="#services">Maintenance</a></li>
-      </ul>
+    <ul class="footer-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="copyright">
+      &copy; 2026 Btech Energy Ltd. All rights reserved.
     </div>
-    <div class="footer-col">
-      <h4>Shop</h4>
-      <ul>
-        <li><a href="#shop">Solar Panels</a></li>
-        <li><a href="#shop">Inverters</a></li>
-        <li><a href="#shop">Batteries</a></li>
-        <li><a href="#shop">Controllers</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 Btech Energi Ltd. All rights reserved.</span>
-    <div class="social-links">
-      <a href="#" class="social-link">𝕏</a>
-      <a href="#" class="social-link">in</a>
-      <a href="#" class="social-link">f</a>
-      <a href="#" class="social-link">▶</a>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="modal" onclick="closeModal(event)">
-  <div class="modal">
-    <div class="modal-icon" id="modal-icon"></div>
-    <h3 id="modal-title"></h3>
-    <p id="modal-body"></p>
-    <button class="modal-close" onclick="document.getElementById('modal').classList.remove('active')">Close</button>
-  </div>
-</div>
-
-<script>
-  function toggleMenu() {
-    document.getElementById('navlinks').classList.toggle('open');
-  }
-
-  function openModal(icon, title, body) {
-    document.getElementById('modal-icon').textContent = icon;
-    document.getElementById('modal-title').textContent = title;
-    document.getElementById('modal-body').textContent = body;
-    document.getElementById('modal').classList.add('active');
-  }
-
-  function closeModal(e) {
-    if (e.target === document.getElementById('modal')) {
-      document.getElementById('modal').classList.remove('active');
-    }
-  }
-
-  function addToCart(name) {
-    openModal('🛒', 'Added to Cart!', name + ' has been added to your cart. Proceed to checkout or continue shopping.');
-  }
-
-  function submitForm(e) {
-    e.preventDefault();
-    openModal('✅', 'Message Sent!', 'Thank you for contacting Btech Energi. Our team will get back to you within 24 hours.');
-    e.target.reset();
-  }
-
-  // Navbar scroll effect
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    if (window.scrollY > 40) {
-      nav.style.background = 'rgba(5,13,26,0.98)';
-    } else {
-      nav.style.background = 'rgba(5,13,26,0.92)';
-    }
-  });
-
-  // Close mobile nav on link click
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => {
-      document.getElementById('navlinks').classList.remove('open');
-    });
-  });
-</script>
 </body>
 </html>
