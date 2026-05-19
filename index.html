@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Btech Energi Ltd — Reliable Solar Energy Solutions in Nigeria</title>
+<title>Btech Energi Ltd — Premium Solar Energy Solutions in Nigeria</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -79,8 +79,6 @@
     text-decoration: none;
   }
   .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-  .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; }
 
   /* ── SECTIONS ── */
   section { padding: 100px 5vw; }
@@ -209,6 +207,19 @@
     border-radius: 4px; padding: 4px 12px; margin-bottom: 16px;
   }
 
+  /* ── TESTIMONIALS ── */
+  #testimonials { background: var(--navy); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+  .testimonial-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 16px; padding: 32px;
+    position: relative;
+  }
+  .testimonial-card p { font-style: italic; color: var(--text-muted); margin-bottom: 24px; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .author-info strong { display: block; color: var(--text); font-size: 15px; }
+  .author-info span { color: var(--text-dim); font-size: 13px; }
+
   /* ── CONTACT ── */
   #contact { background: var(--navy-3); }
   .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
@@ -256,11 +267,11 @@
 
   @media (max-width: 992px) {
     .about-grid, .contact-wrap { grid-template-columns: 1fr; gap: 50px; }
-    .services-grid { grid-template-columns: 1fr 1fr; }
+    .services-grid, .testimonials-grid { grid-template-columns: 1fr 1fr; }
     .hero-title { font-size: 3.5rem; }
   }
   @media (max-width: 768px) {
-    .services-grid, .projects-grid { grid-template-columns: 1fr; }
+    .services-grid, .projects-grid, .testimonials-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     .hero-title { font-size: 2.8rem; }
   }
@@ -286,12 +297,12 @@
   <section id="home">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <div class="hero-badge">Trusted Solar Energy Partner in Nigeria</div>
-      <h1 class="hero-title">Switch to <em>Clean</em>, Reliable Energy Today.</h1>
-      <p class="hero-sub">Btech Energi Ltd provides high-quality solar solutions for homes and businesses. We solve Nigeria's power challenges with technical precision and genuine care.</p>
+      <div class="hero-badge">Harness the Power of the Sun</div>
+      <h1 class="hero-title">Sustainable Energy for <em>Homes</em> & Businesses.</h1>
+      <p class="hero-sub">Btech Energi Ltd provides premium solar solutions, quality inverter sales, and expert maintenance. Reduce your carbon footprint and save on energy bills today.</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn-primary">Start Your Journey</a>
-        <a href="#services" class="btn-outline">Our Solutions</a>
+        <a href="#contact" class="btn-primary">Get Expert Consultation</a>
+        <a href="https://btechenergi.catlog.shop/" class="btn-outline" target="_blank">Shop Solar Solutions</a>
       </div>
     </div>
   </section>
@@ -303,58 +314,107 @@
       </div>
       <div class="about-info">
         <div class="section-label">About Btech Energi</div>
-        <h2>Solving Nigeria's Power Challenges Since 2018</h2>
-        <p>Btech Energi Ltd is a leading solar energy company based in Nigeria, committed to delivering reliable, clean, and cost-effective power solutions. We manage every stage of your energy journey—from consultation to professional installation and maintenance.</p>
+        <h2>Your Trusted Partner for Reliable Solar Solutions</h2>
+        <p>Providing sustainable solar energy solutions since 2021. We are committed to delivering reliable, clean, and cost-effective power solutions to homes and businesses across Nigeria. We manage every stage of your energy journey—from consultation to professional installation.</p>
         <div class="about-features">
-          <div class="feat-pill"><span class="feat-icon">✓</span> 10+ Years Experience</div>
-          <div class="feat-pill"><span class="feat-icon">✓</span> Expert Technicians</div>
-          <div class="feat-pill"><span class="feat-icon">✓</span> 24/7 Support</div>
-          <div class="feat-pill"><span class="feat-icon">✓</span> Quality Guaranteed</div>
+          <div class="feat-pill"><span class="feat-icon">✓</span> Correct System Sizing</div>
+          <div class="feat-pill"><span class="feat-icon">✓</span> Premium Inverters</div>
+          <div class="feat-pill"><span class="feat-icon">✓</span> Lithium & Lead Acid</div>
+          <div class="feat-pill"><span class="feat-icon">✓</span> Expert Maintenance</div>
         </div>
       </div>
     </div>
   </section>
 
   <section id="services">
-    <div class="section-label" style="text-align: center;">Our Expertise</div>
-    <h2 style="text-align: center;">Premium Solar Solutions</h2>
+    <div class="section-label" style="text-align: center;">Our Services</div>
+    <h2 style="text-align: center;">Expert Energy Expertise</h2>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon">⚡</div>
+        <div class="service-icon">☀️</div>
         <h3>Solar Installation</h3>
-        <p>Professional installation of solar panels, inverters, and battery systems tailored to your specific energy needs.</p>
+        <p>Professional design and installation of solar systems, from 1.5KVA to 10KVA+ setups tailored to your needs.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔋</div>
+        <h3>Power Backup</h3>
+        <p>Quality inverter and battery sales (Lithium & Lead Acid) to ensure uninterrupted power for your home or office.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🛠️</div>
-        <h3>Maintenance & Repairs</h3>
-        <p>Keep your system running at peak performance with our scheduled maintenance and prompt repair services.</p>
+        <h3>Maintenance</h3>
+        <p>Expert general maintenance and repairs to keep your solar investment running at peak performance.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📹</div>
+        <h3>CCTV & Security</h3>
+        <p>Professional CCTV installation and maintenance to keep your property secure with reliable power.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💡</div>
+        <h3>Solar Street Lights</h3>
+        <p>Installation of high-quality solar street lights for residential estates and commercial properties.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🎓</div>
-        <h3>Training Services</h3>
-        <p>Hands-on solar energy training for individuals and organizations looking to build real-world technical skills.</p>
+        <h3>Technical Training</h3>
+        <p>Advanced renewable energy workshops and hands-on solar installation training for aspiring technicians.</p>
       </div>
     </div>
   </section>
 
   <section id="projects">
-    <div class="section-label" style="text-align: center;">Our Work</div>
-    <h2 style="text-align: center;">Recent Installations</h2>
+    <div class="section-label" style="text-align: center;">Recent Projects</div>
+    <h2 style="text-align: center;">Powering Nigeria the Clean Way</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <img src="assets/inverter-system.jpg" alt="Residential Solar Installation" class="project-img">
+        <img src="assets/inverter-system.jpg" alt="4.2KVA Lithium System" class="project-img">
         <div class="project-info">
-          <div class="project-tag">Residential</div>
-          <h3>Hybrid Solar System</h3>
-          <p>Complete off-grid installation for a 5-bedroom residence in Ibadan, Oyo State.</p>
+          <div class="project-tag">Ikorodu, Lagos</div>
+          <h3>4.2KVA Lithium System</h3>
+          <p>4.2KVA inverter with 5KWH Lithium ion Battery and 6 units of 300W panels.</p>
         </div>
       </div>
       <div class="project-card">
-        <img src="assets/commercial-solar.jpg" alt="Commercial Solar Installation" class="project-img">
+        <img src="assets/commercial-solar.jpg" alt="4.2KVA System Lekki" class="project-img">
         <div class="project-info">
-          <div class="project-tag">Commercial</div>
-          <h3>Corporate Power Solution</h3>
-          <p>Large-scale solar array for a commercial office complex, reducing energy costs by 70%.</p>
+          <div class="project-tag">Lekki, Lagos</div>
+          <h3>4.2KVA Hybrid System</h3>
+          <p>4.2kva inverter with 10Kwh lead acid battery and 8 units of 420W panels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="section-label" style="text-align: center;">Testimonials</div>
+    <h2 style="text-align: center;">What Our Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>"The solar installation by Btech Energi has completely transformed our energy situation. We now have reliable power 24/7 and our electricity bills have dropped significantly."</p>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <strong>Mueez Motors</strong>
+            <span>Business Owner</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"I was skeptical about solar energy at first, but after Btech installed our system, I'm a believer. The team was professional, and the system has been working flawlessly for months."</p>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <strong>Charles</strong>
+            <span>Homeowner</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"As a design studio, we need consistent power for our equipment. Btech's solar solution has been a game-changer for our business, providing reliable energy and reducing costs."</p>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <strong>TT Design Services</strong>
+            <span>Design Studio</span>
+          </div>
         </div>
       </div>
     </div>
@@ -364,28 +424,35 @@
     <div class="contact-wrap">
       <div class="contact-info">
         <div class="section-label">Contact Us</div>
-        <h2>Let's Power Your Future</h2>
-        <p>Ready to make the switch? Reach out to our experts for a free consultation and quote.</p>
+        <h2>Ready to Switch to Solar?</h2>
+        <p>Our experts are ready to help you find the perfect solar solution for your needs. Get a free consultation today.</p>
         
         <div class="contact-detail">
           <div class="contact-icon">📍</div>
           <div>
-            <strong>Head Office</strong>
-            <span>1435D, Secretariat Road, Bodija, Ibadan</span>
+            <strong>Office Address</strong>
+            <span>15 Emmanuel street, Bariga, Lagos</span>
           </div>
         </div>
         <div class="contact-detail">
           <div class="contact-icon">📞</div>
           <div>
             <strong>Phone</strong>
-            <span>+234 913 816 8839 | +234 703 257 2590</span>
+            <span>09052947707</span>
           </div>
         </div>
         <div class="contact-detail">
           <div class="contact-icon">✉️</div>
           <div>
             <strong>Email</strong>
-            <span>info@btech.com.ng</span>
+            <span>btechenergi@gmail.com</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📸</div>
+          <div>
+            <strong>Instagram</strong>
+            <span>@b_tech_energi</span>
           </div>
         </div>
       </div>
